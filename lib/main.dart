@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
+import 'package:mvvm_riverpod/gen/assets.gen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,10 +39,7 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/img/flutter-icon.png',
-              width: 200,
-            ),
+            Assets.img.flutterIcon.image(width: 200),
             Text(
               S.of(context).hello,
               style: Theme.of(context).textTheme.headline4,
